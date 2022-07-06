@@ -3,6 +3,12 @@
 ## Description
 This repository details my mobile app development course path. Projects are the larger culmination of my learning with the DXD being my most current and latest project. Most of the GUI design was not covered and self-learned. The course exercises and projects help display new concepts to me such as asynchronous logic, responsive layouts, lambda expressions (love these), dependency services, and much more. NOTE: Apps are made with Xamarin Framework.
 
+## GitLab to GitHub Initial Error
+Couldn't directly import repository and commits to GitHub due to files over 100 MB whether deleted or referenced after deletion. For full commit history, GitLab link is https://gitlab.csi.miamioh.edu/combswo/cse382
+![image](https://user-images.githubusercontent.com/93929142/177580291-b005033c-55e9-485f-bb39-88be4d22bad4.png)
+
+
+
 ## Visuals
 COMING SOON
 
