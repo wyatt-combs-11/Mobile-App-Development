@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Name="MyPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DXDLabs.ExercisePage">
+    
+    <StackLayout x:Name="Stack" HorizontalOptions="FillAndExpand" Padding="10">
+        <Label x:Name="ExerciseName" FontSize="36" TextColor="White" HorizontalTextAlignment="Center" TextTransform="Uppercase" />
+        <BoxView Color="#35c5d5" HeightRequest="5" CornerRadius="3" WidthRequest="220" HorizontalOptions="Center"/>
+        <Label x:Name="ExerciseTarget" TextColor="White" HorizontalTextAlignment="Center" TextTransform="Uppercase"/>
+        <Image x:Name="ExerciseGif" WidthRequest="250" Margin="0,35,0,0" IsAnimationPlaying="True" IsVisible="True"/>
+        <Button x:Name="Play" Text="Refresh" Clicked="Button_Clicked"/> 
+        <Button x:Name="AddButton" Text="Favorite Exercise" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" WidthRequest="300" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" Opacity="0.7" BorderColor="DarkGray" BorderWidth="3" />
+    </StackLayout>
+</ContentPage>

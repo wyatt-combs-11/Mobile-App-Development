@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DXDLabs.ProductsPage"
+    BackgroundImageSource="https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="Margin" Value="5,0,5,0"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="0,40,0,40">
+        <Label Text="DXD PUMP™ (Blue Raspberry)" TextColor="Black" HorizontalOptions="End" FontAttributes="Bold" FontSize="Title" WidthRequest="320" VerticalTextAlignment="Center" HeightRequest="80" HorizontalTextAlignment="Center">
+            <Label.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="White"
+                          Offset="0.1" />
+                    <GradientStop Color="DarkGray"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Grid Padding="0,20,0,20" HeightRequest="500" VerticalOptions="EndAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.RowSpan="7" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,-50,0,0">
+                <Image.Source>
+                    <UriImageSource Uri="https://drivenxdiscipline.com/wp-content/uploads/2022/01/Product-jug_alpha-1536x1536.png"/>
+                </Image.Source>
+            </Image>
+            <Button x:Name="AgmatineSulfate" x:Uid="1" BackgroundColor="#35c5d5" Text="Agmatine Sulfate" FontAttributes="Bold" Opacity="0" Grid.Row="0" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="25,0,-30,0" Clicked="IngredientClicked"/>
+            <Button x:Name="Potassium" BackgroundColor="#35c5d5" Text="Potassium" FontAttributes="Bold" Opacity="0" Grid.Row="2" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="5,0,-65,0" Clicked="IngredientClicked"/>
+            <Button x:Name="VitaminC" BackgroundColor="#35c5d5" Text="Vitamin C" FontAttributes="Bold" Opacity="0" Grid.Row="4" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="20,0,5,0" Clicked="IngredientClicked"/>
+            <Button x:Name="CitrullineMalate" BackgroundColor="#35c5d5" Text="Citrulline Malate" FontAttributes="Bold" Opacity="0" Grid.Row="0" Grid.RowSpan="1" Grid.Column="4" Grid.ColumnSpan="3" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="-30,0,25,0" Clicked="IngredientClicked"/>
+            <Button x:Name="Dextrose" BackgroundColor="#35c5d5" Text="Dextrose" FontAttributes="Bold" Opacity="0" Grid.Row="2" Grid.RowSpan="1" Grid.Column="5" Grid.ColumnSpan="2" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="-65,0,5,0" Clicked="IngredientClicked"/>
+            <Button x:Name="LNorvaline" BackgroundColor="#35c5d5" Text="L-Norvaline" FontAttributes="Bold" Opacity="0" Grid.Row="4" Grid.RowSpan="1" Grid.Column="4" Grid.ColumnSpan="3" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="5,0,20,0" Clicked="IngredientClicked"/>
+            <Button x:Name="Sodium" BackgroundColor="#35c5d5" Text="Sodium" FontAttributes="Bold" Opacity="0" Grid.Row="5" Grid.RowSpan="1" Grid.Column="2" Grid.ColumnSpan="3" CornerRadius="30" BorderColor="White" BorderWidth="4" Margin="50,20,50,-20" Clicked="IngredientClicked"/>
+            <Button Text="Toggle Ingredients" Grid.Column="3" Grid.Row="6" HorizontalOptions="Center" WidthRequest="300" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" Opacity="0.7" Margin="-70,30,-70,-30" BorderColor="DarkGray" BorderWidth="3" Clicked="ToggleIngredientClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

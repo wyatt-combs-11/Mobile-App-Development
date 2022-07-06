@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackNavigation.MainPage">
+    <StackLayout>
+        <Button x:Name="btnPrivacy" Text="Privacy Info" Clicked="PrivacyClicked"/>
+        <Button x:Name="btnUnits" Text="Units" Clicked="UnitsClicked"/>
+        <Button x:Name="btnAbout" Text="About" Clicked="AboutClicked"/>
+        <Button x:Name="btnLicenses" Text="Licenses" Clicked="LicenseClicked"/>
+    </StackLayout>
+
+</ContentPage>

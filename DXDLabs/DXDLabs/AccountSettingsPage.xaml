@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DXDLabs"
+    x:Class="DXDLabs.AccountSettingsPage"
+    BackgroundImageSource="https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg">
+    <StackLayout HorizontalOptions="FillAndExpand" Padding="25">
+        <Label Text="Account Settings" FontSize="36" TextColor="White" Margin="5"/>
+        <BoxView Color="#35c5d5" HeightRequest="8" CornerRadius="5"/>
+        <Button Text="Log In" HorizontalOptions="End" BackgroundColor="#35c5d5" TextColor="Black" FontAttributes="Bold" Padding="5" Clicked="LogInClicked" WidthRequest="100" Margin="0,15,-30,0">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="1,0.5" EndPoint="0,0.5">
+                    <GradientStop Offset="0.0" Color="#35c5d5"/>
+                    <GradientStop Offset="0.5" Color="#35c5d5"/>
+                    <GradientStop Offset="1" Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Text="Log Out" HorizontalOptions="End" BackgroundColor="#35c5d5" TextColor="Black" FontAttributes="Bold" Padding="5" Clicked="LogOutClicked" WidthRequest="100" Margin="0,0,-30,0">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="1,0.5" EndPoint="0,0.5">
+                    <GradientStop Offset="0.0" Color="#35c5d5"/>
+                    <GradientStop Offset="0.5" Color="#35c5d5"/>
+                    <GradientStop Offset="1" Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <StackLayout  BackgroundColor="#35c5d5" WidthRequest="220" HorizontalOptions="Start" Padding="5,10,5,10" Margin="-25,-40,0,50">
+            <StackLayout.Background>
+                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Offset="0.1" Color="#35c5d5"/>
+                    <GradientStop Offset="0.5" Color="#35c5d5"/>
+                    <GradientStop Offset="1" Color="White"/>
+                </LinearGradientBrush>
+                </StackLayout.Background>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Username" VerticalOptions="Fill" VerticalTextAlignment="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="Username" WidthRequest="100" Text="" BackgroundColor="LightGray"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+                <Label Text="Password"  VerticalOptions="Fill" VerticalTextAlignment="Center" TextColor="Black" FontSize="18" FontAttributes="Bold" WidthRequest="100" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="Password" WidthRequest="100" Text="" BackgroundColor="LightGray"/>
+            </StackLayout>
+        </StackLayout>
+        <Frame Padding="5">
+            <Frame.Background>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0.1" Color="#35c5d5"/>
+                    <GradientStop Offset="0.5" Color="#35c5d5"/>
+                    <GradientStop Offset="1" Color="White"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+            <StackLayout>
+                <Label Text="Favorite Exercises" FontAttributes="Bold" HorizontalOptions="Center" WidthRequest="280" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Frame x:Name="FavFrame" Padding="0,0,0,0">
+                    <ListView x:Name="FavoriteEx" HorizontalOptions="Center" WidthRequest="280"/>
+                </Frame>
+                <Button Text="Remove Execise" Grid.Column="3" Grid.Row="6" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="Black" TextColor="White" FontAttributes="Bold" Opacity="0.7" BorderColor="DarkGray" BorderWidth="3" Margin="0,5,0,0" Clicked="RemoveClicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

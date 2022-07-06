@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <Style x:Key="Unused" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DarkSlateGray"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style x:Key="Nums" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DimGray"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style x:Key="Misc" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="LightGray"/>
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style x:Key="Operation" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Blue"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="FontSize" Value="22"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Padding="40,30,40,15">
+        <Label x:Name="Calc" Text="0" TextColor="White" FontSize="30" HorizontalOptions="End"/>
+
+        <Grid Padding="0,20,0,0" ColumnSpacing="10" RowSpacing="10" HeightRequest="600">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Unused Buttons -->
+            <Button Style="{StaticResource Unused}" Text="(" Grid.Row="0" Grid.Column="0" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="2nd" Grid.Row="1" Grid.Column="0" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="1/x" Grid.Row="2" Grid.Column="0" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="x!" Grid.Row="3" Grid.Column="0" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="Deg" Grid.Row="4" Grid.Column="0" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text=")" Grid.Row="0" Grid.Column="1" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="x^2" Grid.Row="1" Grid.Column="1" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="√x" Grid.Row="2" Grid.Column="1" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="sin" Grid.Row="3" Grid.Column="1" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="sinh" Grid.Row="4" Grid.Column="1" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="mc" Grid.Row="0" Grid.Column="2" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="x​^3" Grid.Row="1" Grid.Column="2" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="3√x" Grid.Row="2" Grid.Column="2" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="cos" Grid.Row="3" Grid.Column="2" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="cosh" Grid.Row="4" Grid.Column="2" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="m+" Grid.Row="0" Grid.Column="3" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="x^y" Grid.Row="1" Grid.Column="3" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="x^1/y" Grid.Row="2" Grid.Column="3" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="tan" Grid.Row="3" Grid.Column="3" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="tanh" Grid.Row="4" Grid.Column="3" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="m-" Grid.Row="0" Grid.Column="4" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="e^x" Grid.Row="1" Grid.Column="4" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="ln" Grid.Row="2" Grid.Column="4" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="e" Grid.Row="3" Grid.Column="4" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="π" Grid.Row="4" Grid.Column="4" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="mr" Grid.Row="0" Grid.Column="5" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="10^x" Grid.Row="1" Grid.Column="5" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="log10" Grid.Row="2" Grid.Column="5" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="EE" Grid.Row="3" Grid.Column="5" IsEnabled="False"/>
+            <Button Style="{StaticResource Unused}" Text="Rand" Grid.Row="4" Grid.Column="5" IsEnabled="False"/>
+
+            <!-- Misc Buttons -->
+            <Button Style="{StaticResource Misc}" Text="AC" Grid.Row="0" Grid.Column="6" Clicked="ClearClicked"/>
+            <Button Style="{StaticResource Misc}" Text="+/-" Grid.Row="0" Grid.Column="7" Clicked="ChangeSigns"/>
+            <Button Style="{StaticResource Misc}" Text="%" Grid.Row="0" Grid.Column="8" Clicked="PercentClicked"/>
+            
+            <!-- Number Buttons -->
+            <Button Style="{StaticResource Nums}" Text="7" Grid.Row="1" Grid.Column="6" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="8" Grid.Row="1" Grid.Column="7" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="9" Grid.Row="1" Grid.Column="8" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="4" Grid.Row="2" Grid.Column="6" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="5" Grid.Row="2" Grid.Column="7" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="6" Grid.Row="2" Grid.Column="8" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="1" Grid.Row="3" Grid.Column="6" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="2" Grid.Row="3" Grid.Column="7" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="3" Grid.Row="3" Grid.Column="8" Clicked="OnClicked"/>
+            <Button Style="{StaticResource Nums}" Text="0" Grid.Row="4" Grid.Column="6" Clicked="OnClicked" Grid.ColumnSpan="2"/>
+            <Button Style="{StaticResource Nums}" Text="." Grid.Row="4" Grid.Column="8" IsEnabled="False"/>
+
+            <!-- Operation Buttons -->
+            <Button Style="{StaticResource Operation}" Text="÷" Grid.Row="0" Grid.Column="9" Clicked="OperationClicked"/>
+            <Button Style="{StaticResource Operation}" Text="x" Grid.Row="1" Grid.Column="9" Clicked="OperationClicked"/>
+            <Button Style="{StaticResource Operation}" Text="-" Grid.Row="2" Grid.Column="9" Clicked="OperationClicked"/>
+            <Button Style="{StaticResource Operation}" Text="+" Grid.Row="3" Grid.Column="9" Clicked="OperationClicked"/>
+            <Button Style="{StaticResource Operation}" Text="=" Grid.Row="4" Grid.Column="9" Clicked="EqualsClicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

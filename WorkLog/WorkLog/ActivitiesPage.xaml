@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WorkLog.ActivitiesPage">
+    <StackLayout VerticalOptions="StartAndExpand" Padding="20">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+            <Label Text="Name of Job:" />
+            <Entry x:Name="Job" HorizontalOptions="StartAndExpand" WidthRequest="150"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Odd Hours?" />
+            <CheckBox x:Name="CheckOdd"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Date:" />
+            <DatePicker x:Name="Date"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Time (Hours)" />
+            <Entry x:Name="Hours" WidthRequest="35" Text="0"/>
+            <Label Text=":"/>
+            <Entry x:Name="Minutes" WidthRequest="35" Text="0"/>
+        </StackLayout>
+        <StackLayout x:Name="ActivityLayout">
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button x:Name="Add" Text="Add" Clicked="Add_Clicked"/>
+            <Button x:Name="Update" Text="Update" Clicked="Update_Clicked"/>
+            <Button x:Name="Delete" Text="Delete" Clicked="Delete_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

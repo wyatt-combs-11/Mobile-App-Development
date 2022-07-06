@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RelLayout.MyPage">
+    <ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="BorderColor" Value="red"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="HeightRequest" Value="100"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Frame>
+                    <RelativeLayout>
+                        <Label Text="A"
+                                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Width,
+                                                             Factor=0.5,
+                                                             Constant=0}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Height,
+                                                             Factor=0.0,
+                                                             Constant=0}"/>
+                        <Label Text="B"
+                                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Width,
+                                                             Factor=0.5,
+                                                             Constant=0}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Height,
+                                                             Factor=0.5,
+                                                             Constant=0}"/>
+                    </RelativeLayout>
+                </Frame>
+                <Frame>
+                    <RelativeLayout>
+                        <Label Text="D"
+                                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Width,
+                                                             Factor=0.5,
+                                                             Constant=0}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Height,
+                                                             Factor=0.0,
+                                                             Constant=0}"/>
+                        <Label Text="E"
+                                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Width,
+                                                             Factor=0.5,
+                                                             Constant=0}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Height,
+                                                             Factor=0.5,
+                                                             Constant=0}"/>
+                    </RelativeLayout>
+                </Frame>
+            </StackLayout>
+            <Frame>
+                <RelativeLayout>
+                    <Label Text="Wyatt"
+                                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Width,
+                                                             Factor=0.33,
+                                                             Constant=0}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Height,
+                                                             Factor=0.5,
+                                                             Constant=0}"/>
+                    <Label Text="Combs"
+                                RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Width,
+                                                             Factor=0.67,
+                                                             Constant=0}"
+                               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                             Property=Height,
+                                                             Factor=0.5,
+                                                             Constant=0}"/>
+                </RelativeLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

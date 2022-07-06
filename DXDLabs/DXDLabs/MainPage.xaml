@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:DXDLabs"
+             mc:Ignorable="d"
+             x:Class="DXDLabs.MainPage">
+    <TabbedPage.Resources>
+        <Style TargetType="Page" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundImageSource" Value="https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg"/>
+        </Style>
+        <Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundImageSource" Value="https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg"/>
+        </Style>
+        <Style TargetType="CarouselPage" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundImageSource" Value="https://cdn.wallpapersafari.com/19/23/z7MdVL.jpg"/>
+        </Style>
+    </TabbedPage.Resources>
+
+    <TabbedPage.SelectedTabColor>#35c5d5</TabbedPage.SelectedTabColor>
+    <TabbedPage.UnselectedTabColor>Black</TabbedPage.UnselectedTabColor>
+
+    <CarouselPage Title="Settings">
+        <CarouselPage.Children>
+            <local:AccountSettingsPage/>
+        </CarouselPage.Children>
+    </CarouselPage>
+    <local:MindsetClubPage Title="Mindset Club" />
+    <local:ProductsPage Title="Products"/>
+    <NavigationPage Title="Workouts" BarBackgroundColor="Black" BarTextColor="#35c5d5">
+        <x:Arguments>
+            <local:WorkoutPage />
+        </x:Arguments>
+        <NavigationPage.BackButtonTitle>Workouts</NavigationPage.BackButtonTitle>
+    </NavigationPage>
+    <local:AboutPage Title="About"/>
+</TabbedPage>

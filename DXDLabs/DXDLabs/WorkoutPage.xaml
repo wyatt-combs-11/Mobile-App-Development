@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DXDLabs"
+    x:Class="DXDLabs.WorkoutPage">
+    <StackLayout Margin="10" VerticalOptions="CenterAndExpand">
+        <Label x:Name="Heading" Text="Exercises" TextColor="Black" FontSize="24" Margin="0,0,-10,0" HorizontalOptions="End" HorizontalTextAlignment="Center" WidthRequest="200" HeightRequest="50" VerticalTextAlignment="Center">
+            <Label.Background>
+                <LinearGradientBrush StartPoint="1,0.5" EndPoint="0,0.5">
+                    <GradientStop Offset="0.0" Color="#35c5d5"/>
+                    <GradientStop Offset="0.5" Color="#35c5d5"/>
+                    <GradientStop Offset="1" Color="White"/>
+                </LinearGradientBrush>
+            </Label.Background>
+        </Label>
+        <Frame x:Name="ExFrame" Margin="20" Padding="20,20,20,20">
+            <ListView x:Name="ExerciseList" HeightRequest="300"/>
+        </Frame>
+        <Button Text="Use ExerciseDB API" VerticalOptions="End" TextColor="White" FontAttributes="Bold" BackgroundColor="#35c5d5" Clicked="APIButtonClicked" Margin="20,0,20,0"/>
+    </StackLayout>
+</ContentPage>

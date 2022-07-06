@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GridXAML.MyPage">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Beige"/>
+            <Setter Property="TextColor" Value="ForestGreen"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="0,40,0,0">
+            <Label x:Name="Number" Text="0" FontSize="Large" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Grid Padding="0,40,0,0" HeightRequest="800">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="0" Clicked="OnClicked"/>
+                <Button Text="1" Clicked="OnClicked"/>
+                <Button Text="2" Clicked="OnClicked"/>
+                <Button Text="3" Clicked="OnClicked"/>
+                <Button Text="4" Clicked="OnClicked"/>
+                <Button Text="5" Clicked="OnClicked"/>
+                <Button Text="6" Clicked="OnClicked"/>
+                <Button Text="7" Clicked="OnClicked"/>
+                <Button Text="8" Clicked="OnClicked"/>
+                <Button Text="9" Clicked="OnClicked"/>
+
+                <Button Text="7" Grid.Row="0" Grid.Column="0" Clicked="OnClicked"/>
+                <Button Text="8" Grid.Row="0" Grid.Column="1" Clicked="OnClicked"/>
+                <Button Text="9" Grid.Row="0" Grid.Column="2" Clicked="OnClicked"/>
+                <Button Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnClicked"/>
+                <Button Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnClicked"/>
+                <Button Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnClicked"/>
+                <Button Text="1" Grid.Row="2" Grid.Column="0" Clicked="OnClicked"/>
+                <Button Text="2" Grid.Row="2" Grid.Column="1" Clicked="OnClicked"/>
+                <Button Text="3" Grid.Row="2" Grid.Column="2" Clicked="OnClicked"/>
+                <Button Text="0" Grid.Row="3" Grid.Column="0" Clicked="OnClicked" Grid.ColumnSpan="2"/>
+                <Button Text="Clear" Grid.Row="3" Grid.Column="2" Clicked="OnClear"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
